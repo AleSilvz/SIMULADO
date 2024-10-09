@@ -136,14 +136,8 @@ img {
     display: none; /* Oculta o elemento */
 }
 
-
-menu {
-    display: block;
-}
-
-
 #menu-btn {
-    display: block;
+    margin-top: 100px; /* Ajuste o valor conforme necessário */
     padding: 10px 20px; /* Espaçamento interno do botão */
     font-size: 16px; /* Tamanho da fonte */
     color: #fff; /* Cor do texto */
