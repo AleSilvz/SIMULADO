@@ -1,0 +1,158 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    background-color: #f5f5f5; /* Cor de fundo mais suave */
+    margin: 0; /* Margem zero */
+    padding: 0; /* Padding zero */
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
+
+/* Centralizar o título na parte superior */
+ h1 {
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Container principal para categorias e opções */
+.container {
+    text-align: center; /* Centraliza o texto dentro do container */
+    background-color: #ffffff; /* Fundo branco */
+    padding: 30px; /* Padding interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    width: 90%; /* Largura responsiva */
+    max-width: 450px; /* Largura máxima */
+}
+
+/* Estilo para botões de categoria e opções */
+.category-btn {
+    display: block;
+    margin: 15px auto; /* Margem superior e inferior */
+    padding: 12px 25px; /* Padding interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #fa9bb9; /* Cor padrão */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+
+/* Efeito ao passar o mouse sobre os botões */
+.category-btn:hover{
+    background-color: #bb5778; /* Cor ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Adicionando um efeito de foco */
+.category-btn:focus, .option:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra para destacar o foco */
+}
+
+/* Container do quiz */
+#quiz-container {
+    background-color: #FFFFFF; /* Fundo do container */
+    padding: 30px; /* Padding interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 90%; /* Largura responsiva */
+    max-width: 700px; /* Largura máxima */
+}
+
+/* Estilo das perguntas */
+.question {
+    margin-bottom: 45px; /* Espaçamento inferior */
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+    color: #4A4A4A; /* Cor do texto */
+    text-align: left; /* Centraliza o texto */
+}
+
+/* Estilo das opções */
+.option {
+    color: #fff; /* Cor do texto */
+    padding: 12px; /* Padding interno */
+    margin: 10px 0; /* Margem superior e inferior */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    text-align: left;
+    display: block;
+    font-size: 17px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+/* Efeito ao passar o mouse sobre as opções */
+.option:hover {
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilo do botão "next" */
+#next-btn {
+    display: none; /* Ocultar por padrão */
+    background-color: #FF5722; /* Verde */
+    color: #fff; /* Cor do texto */
+    padding: 12px 20px; /* Padding interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o botão "next" */
+#next-btn:hover {
+    background-color: #993719; /* Verde escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 0px;
+    height: auto;
+    width: 25%;
+}
+ 
+/* Estilo do resultado */
+#result {
+    margin-top: 20px; /* Margem superior */
+    font-size: 20px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Cor do texto */
+    display: none; /* Ocultar por padrão */
+}
+
+/* Estilo para esconder elementos */
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+
+menu {
+    display: block;
+}
+
+
+#menu-btn {
+    display: block;
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background-color: #034e9e; /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Borda arredondada do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+#menu-btn:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}

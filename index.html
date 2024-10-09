@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz de Trânsito</title>
+</head>
+<body>
+    <script type="module" src="script.js"></script>
+    <div id="category-selection">
+        <h1>Simulado Amorzinho</h1>
+        <button class="category-btn" data-category="Direção Defensiva">Direção Defensiva</button>
+        <button class="category-btn" data-category="Legislação">Legislação</button>
+        <button class="category-btn" data-category="Mecânica Básica">Mecânica Básica</button>
+        <button class="category-btn" data-category="Meio Ambiente">Meio Ambiente</button>
+        <button class="category-btn" data-category="Placas">Placas</button>
+        <button class="category-btn" data-category="Primeiros Socorros">Primeiros Socorros</button>
+        <button class="category-btn" id="all-questions-btn">Realizar Prova</button> <!-- Novo botão -->
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <h2 class= question id="question"></h2>
+        <img id="question-image" src="" alt="Question Image" style="max-width: 50%; display: none;" />
+        <div>
+            <button class="option" onclick="checkAnswer(0)"></button>
+            <button class="option" onclick="checkAnswer(1)"></button>
+            <button class="option" onclick="checkAnswer(2)"></button>
+            <button class="option" onclick="checkAnswer(3)"></button>
+        </div>
+        <button id="next-btn" style="display: none;" onclick="nextQuestion()">Próxima Questão</button>
+        
+    </div>
+
+    <div id="result" style="display: none;"></div>
+
+    <button id="menu-btn" style="display: none;">Voltar ao Menu</button>
+   
+    <script src="script.js"></script>
+</body>
+</html>
