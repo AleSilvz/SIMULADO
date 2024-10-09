@@ -25,6 +25,7 @@ function loadQuestion() {
     document.getElementById("next-btn").style.display = "none"; // Oculta o botão "Próxima Pergunta"
     selectedOption = null; // Reinicia a seleção de opção
     const questionData = getCurrentQuestionData();
+    
     document.getElementById("question").innerText = questionData.question;
 
     // Exibir imagem, se existir
@@ -39,19 +40,25 @@ function loadQuestion() {
     const options = document.querySelectorAll(".option");
     options.forEach((option, index) => {
         option.innerText = questionData.options[index];
-        option.style.background = "#FF9800"; // Cor padrão das opções
+        option.style.background = "#AEC6CF"; // Cor padrão das opções
         option.disabled = false;
 
         // Adicionar evento de clique para cada opção
         option.onclick = () => selectOption(index);
     });
+
+    // Atualiza o contador de questões
+    const totalQuestions = getTotalQuestions();
+    document.getElementById("question-counter").innerText = `${currentQuestion + 1}/${totalQuestions}`;
+
+    updateButtonVisibility(); // Atualiza a visibilidade dos botões ao carregar a pergunta
 }
 
 // Selecionar uma opção e permitir a re-escolha
 function selectOption(index) {
     const options = document.querySelectorAll(".option");
-    options.forEach(option => option.style.background = "#FF9800"); // Cor padrão
-    options[index].style.background = "#c07402"; // Cor de seleção (amarelo)
+    options.forEach(option => option.style.background = "#AEC6CF"); // Cor padrão
+    options[index].style.background = "#4d595e"; // Cor de seleção (amarelo)
     selectedOption = index; // Atualiza a opção selecionada
     document.getElementById("next-btn").style.display = "block"; // Mostra o botão "Próxima Pergunta"
 }
@@ -77,10 +84,10 @@ function checkAnswer() {
 
     if (selectedOption === questionData.correct) {
         score++;
-        options[selectedOption].style.background = "#FF9800"; // Verde para correto
+        options[selectedOption].style.background = "#4d595e"; // Verde para correto
     } else {
-        options[selectedOption].style.background = "#FF9800"; // Vermelho para incorreto
-        options[questionData.correct].style.background = "#FF9800"; // Mostrar a resposta correta
+        options[selectedOption].style.background = "#4d595e"; // Vermelho para incorreto
+        options[questionData.correct].style.background = "#4d595e"; // Mostrar a resposta correta
     }
 
     options.forEach(option => option.disabled = true); // Desativar todas as opções
@@ -104,6 +111,14 @@ function nextQuestion() {
     }
 }
 
+// Função para voltar à questão anterior
+function previousQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--; // Decrementa a questão atual
+        loadQuestion(); // Carrega a questão anterior
+    }
+}
+
 // Obter o total de questões baseado na categoria ou se for a prova completa
 function getTotalQuestions() {
     if (selectedCategory === 'Todas') {
@@ -118,9 +133,9 @@ function showCategoryResult() {
     const totalQuestions = getTotalQuestions();
     const percentage = (score / totalQuestions) * 100;
 
-    result.innerText = `Categoria: ${selectedCategory}\n` +
+    result.innerHTML = `Categoria: ${selectedCategory}\n` +
                        ` Acertou ${score} de ${totalQuestions} questões\n` +
-                       ` Nota: ${percentage.toFixed(2)}%`;
+                       `Nota: ${percentage.toFixed(0)}%`;
 
     if (percentage >= 70) {
         result.innerText += "\nAPROVADO";
@@ -130,8 +145,15 @@ function showCategoryResult() {
 
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("next-btn").style.display = "none";
+    document.getElementById("back-btn").style.display = "none"; // Ocultar botão "Voltar" no final
     result.style.display = "block";
     document.getElementById("menu-btn").style.display = "block"; // Mostrar o botão de menu
+}
+
+// Atualizar a visibilidade dos botões
+function updateButtonVisibility() {
+    document.getElementById("back-btn").style.display = currentQuestion > 0 ? "block" : "none"; // Oculta o botão "Voltar" na primeira pergunta
+    document.getElementById("next-btn").style.display = selectedOption !== null ? "block" : "none"; // Mostra o botão "Próxima Pergunta" se uma opção estiver selecionada
 }
 
 // Selecionar a categoria e iniciar o quiz
@@ -168,3 +190,6 @@ document.getElementById("menu-btn").addEventListener("click", function () {
 
 // Evento para o botão "Próxima Pergunta"
 document.getElementById("next-btn").addEventListener("click", nextQuestion);
+
+// Evento para o botão "Voltar"
+document.getElementById("back-btn").addEventListener("click", previousQuestion);

@@ -20,6 +20,7 @@
     </div>
 
     <div id="quiz-container" style="display: none;">
+        <div id="question-counter"></div>
         <h2 class= question id="question"></h2>
         <img id="question-image" src="" alt="Question Image" style="max-width: 50%; display: none;" />
         <div>
@@ -29,15 +30,16 @@
             <button class="option" onclick="checkAnswer(3)"></button>
         </div>
         <button id="next-btn" style="display: none;" onclick="nextQuestion()">Próxima Questão</button>
+        <button id="back-btn" style="display: nome;" onclick="backQuestion()">Voltar Questão</button>
         
     </div>
 
-    <div id="result" style="display: none;"></div>
-
-    <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <button id="menu-btn" style="display: none; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 20px;">Voltar ao Menu</button>
+    <div id="result" style="display: none; text-align: center;"></div>
+    
+    <div style="display: flex; justify-content: center; margin-top: 50px;">
+        <button id="menu-btn" style="display: none; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 50px;">Voltar ao Menu</button>
     </div>
-   
+
     <script src="script.js"></script>
 </body>
 </html>

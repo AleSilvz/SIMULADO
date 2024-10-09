@@ -35,7 +35,7 @@ body {
     padding: 12px 25px; /* Padding interno */
     border: none; /* Sem borda */
     border-radius: 10px; /* Bordas arredondadas */
-    background-color: #fa9bb9; /* Cor padrão */
+    background-color: #ff73a0; /* Cor padrão */
     color: white; /* Cor do texto */
     font-size: 16px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
@@ -47,14 +47,8 @@ body {
 
 /* Efeito ao passar o mouse sobre os botões */
 .category-btn:hover{
-    background-color: #bb5778; /* Cor ao passar o mouse */
+    background-color: #a34262; /* Cor ao passar o mouse */
     transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
-}
-
-/* Adicionando um efeito de foco */
-.category-btn:focus, .option:focus {
-    outline: none; /* Remove o contorno padrão */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra para destacar o foco */
 }
 
 /* Container do quiz */
@@ -67,9 +61,22 @@ body {
     max-width: 700px; /* Largura máxima */
 }
 
+#question-counter {
+    background-color: #ebebeb;
+    color: #4A4A4A; /* Cor do texto */
+    padding: 8px; /* Padding interno */
+    margin: 0px 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center;
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    float: right;
+    
+}
+
 /* Estilo das perguntas */
 .question {
-    margin-bottom: 45px; /* Espaçamento inferior */
+    margin-bottom: 40px; /* Espaçamento inferior */
     font-size: 30px; /* Tamanho da fonte */
     font-weight: 600; /* Negrito */
     color: #4A4A4A; /* Cor do texto */
@@ -78,7 +85,7 @@ body {
 
 /* Estilo das opções */
 .option {
-    color: #fff; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     padding: 12px; /* Padding interno */
     margin: 10px 0; /* Margem superior e inferior */
     border: none; /* Sem borda */
@@ -90,6 +97,8 @@ body {
     font-weight: bold; /* Negrito */
 }
 
+
+
 /* Efeito ao passar o mouse sobre as opções */
 .option:hover {
     transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
@@ -98,19 +107,40 @@ body {
 /* Estilo do botão "next" */
 #next-btn {
     display: none; /* Ocultar por padrão */
-    background-color: #FF5722; /* Verde */
-    color: #fff; /* Cor do texto */
+    background-color: #4CAF50; /* Verde */
+    color: #FFFFFF; /* Cor do texto */
+    margin-top: 10px;
     padding: 12px 20px; /* Padding interno */
     border: none; /* Sem borda */
     border-radius: 10px; /* Bordas arredondadas */
     cursor: pointer; /* Cursor de ponteiro */
     font-weight: bold; /* Negrito */
     transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    float: right;
 }
 
 /* Efeito ao passar o mouse sobre o botão "next" */
 #next-btn:hover {
-    background-color: #993719; /* Verde escuro ao passar o mouse */
+    background-color: #226324; /* Verde escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+#back-btn {
+    display: none; /* Ocultar por padrão */
+    background-color: #2196F3; /* Verde */
+    color: #fff; /* Cor do texto */
+    margin-top: 10px;
+    padding: 12px 20px; /* Padding interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    float: left; 
+}
+
+#back-btn:hover {
+    background-color: #135081; /* Verde escuro ao passar o mouse */
     transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
 }
 
@@ -124,10 +154,11 @@ img {
  
 /* Estilo do resultado */
 #result {
+    font-weight: 700;
     margin-top: 20px; /* Margem superior */
     font-size: 20px; /* Tamanho da fonte */
     text-align: center; /* Centraliza o texto */
-    color: #333; /* Cor do texto */
+    color: #5a5a5a; /* Cor do texto */
     display: none; /* Ocultar por padrão */
 }
 
@@ -137,16 +168,16 @@ img {
 }
 
 #menu-btn {
-    margin-top: 100px; /* Ajuste o valor conforme necessário */
+    font-weight: 600;
     padding: 10px 20px; /* Espaçamento interno do botão */
     font-size: 16px; /* Tamanho da fonte */
     color: #fff; /* Cor do texto */
-    background-color: #034e9e; /* Cor de fundo do botão */
+    background-color: #601edb; /* Cor de fundo do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Borda arredondada do botão */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
 }
 
 #menu-btn:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+    background-color: #380e86; /* Cor do botão ao passar o mouse */
 }
