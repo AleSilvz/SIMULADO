@@ -1,6 +1,6 @@
 /* Estilo geral do corpo */
 body {
-    background-image: url(./img/Home/backgroundImg.jpg);
+    background-image: url(./img/backgroundImg.jpg);
     background-size: cover;
     background-position: center center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
