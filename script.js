@@ -3,7 +3,7 @@ import mecaniabasicaquestions from './Questions/mecânica_básica.js';
 import legislacaoquestions from './Questions/legislação.js';
 import meioambientequestions from './Questions/meio_ambiente.js';
 import psocorrosquestions from './Questions/primeiros_socorros.js';
-import placasquestions from './Questions/placas.js';
+//import placasquestions from './Questions/placas.js';
 
 // Array de questões organizadas por categorias
 const quizData = {
@@ -12,7 +12,7 @@ const quizData = {
     "Mecânica Básica": mecaniabasicaquestions["Mecânica Básica"],
     "Meio Ambiente": meioambientequestions["Meio Ambiente"],
     "Primeiros Socorros": psocorrosquestions["Primeiro Socorros"],
-    "Placas": placasquestions["Placas"],
+    //"Placas": placasquestions["Placas"],
 };
 
 let selectedCategory = null;
@@ -20,7 +20,6 @@ let currentQuestion = 0;
 let selectedOption = null; // Variável para armazenar a opção selecionada
 let score = 0;
 
-// Carregar questão com base na categoria e índice
 function loadQuestion() {
     document.getElementById("next-btn").style.display = "none"; // Oculta o botão "Próxima Pergunta"
     selectedOption = null; // Reinicia a seleção de opção
@@ -40,7 +39,7 @@ function loadQuestion() {
     const options = document.querySelectorAll(".option");
     options.forEach((option, index) => {
         option.innerText = questionData.options[index];
-        option.style.background = "#AEC6CF"; // Cor padrão das opções
+        option.classList.remove("selected", "correct", "incorrect"); // Remove classes antigas
         option.disabled = false;
 
         // Adicionar evento de clique para cada opção
@@ -54,14 +53,15 @@ function loadQuestion() {
     updateButtonVisibility(); // Atualiza a visibilidade dos botões ao carregar a pergunta
 }
 
-// Selecionar uma opção e permitir a re-escolha
+
 function selectOption(index) {
     const options = document.querySelectorAll(".option");
-    options.forEach(option => option.style.background = "#AEC6CF"); // Cor padrão
-    options[index].style.background = "#4d595e"; // Cor de seleção (amarelo)
+    options.forEach(option => option.classList.remove("selected")); // Remove a classe "selected" de todas as opções
+    options[index].classList.add("selected"); // Adiciona a classe "selected" à opção selecionada
     selectedOption = index; // Atualiza a opção selecionada
     document.getElementById("next-btn").style.display = "block"; // Mostra o botão "Próxima Pergunta"
 }
+
 
 // Obter a pergunta atual com base na categoria ou se for a prova completa
 function getCurrentQuestionData() {
@@ -84,15 +84,16 @@ function checkAnswer() {
 
     if (selectedOption === questionData.correct) {
         score++;
-        options[selectedOption].style.background = "#4d595e"; // Verde para correto
+        options[selectedOption].classList.add("correct"); // Adiciona a classe "correct"
     } else {
-        options[selectedOption].style.background = "#4d595e"; // Vermelho para incorreto
-        options[questionData.correct].style.background = "#4d595e"; // Mostrar a resposta correta
+        options[selectedOption].classList.add("incorrect"); // Adiciona a classe "incorrect"
+        /*options[questionData.correct].classList.add("correct"); // Mostrar a resposta correta*/
     }
 
     options.forEach(option => option.disabled = true); // Desativar todas as opções
     document.getElementById("next-btn").style.display = "block"; // Mostra o botão de próxima pergunta
 }
+
 
 // Ir para a próxima questão ou mostrar resultado final
 function nextQuestion() {
