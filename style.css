@@ -1,5 +1,8 @@
 /* Estilo geral do corpo */
 body {
+    background-image: url(./img/Home/backgroundImg.jpg);
+    background-size: cover;
+    background-position: center center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
     background-color: #f5f5f5; /* Cor de fundo mais suave */
     margin: 0; /* Margem zero */
@@ -12,20 +15,17 @@ body {
 
 /* Centralizar o título na parte superior */
  h1 {
-    color: #4A4A4A;
+    color: #4A4A4A;/*#4A4A4A*/
     text-align: center;
     margin-bottom: 35px;
 }
 
-/* Container principal para categorias e opções */
-.container {
-    text-align: center; /* Centraliza o texto dentro do container */
-    background-color: #ffffff; /* Fundo branco */
-    padding: 30px; /* Padding interno */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    width: 90%; /* Largura responsiva */
-    max-width: 450px; /* Largura máxima */
+/* Boa sorte, amorzinho */
+h3 {
+    display: flex;
+    justify-content: center;
+    color: #e2e2e2;
+    font-size: 20px;
 }
 
 /* Estilo para botões de categoria e opções */
@@ -35,15 +35,14 @@ body {
     padding: 12px 25px; /* Padding interno */
     border: none; /* Sem borda */
     border-radius: 10px; /* Bordas arredondadas */
-    background-color: #ff73a0; /* Cor padrão */
+    background-color: rgba(255, 115, 159, 0.555); /* Cor padrão */
     color: white; /* Cor do texto */
-    font-size: 16px; /* Tamanho da fonte */
+    font-size: 100%; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
     text-transform: uppercase; /* Letras maiúsculas */
     transition: background-color 0.3s, transform 0.2s; /* Transição suave */
     cursor: pointer; /* Cursor de ponteiro */
 }
-
 
 /* Efeito ao passar o mouse sobre os botões */
 .category-btn:hover{
@@ -53,7 +52,7 @@ body {
 
 /* Container do quiz */
 #quiz-container {
-    background-color: #FFFFFF; /* Fundo do container */
+    background-color: rgba(240, 240, 240, 0.205); /* Fundo do container */
     padding: 30px; /* Padding interno */
     border-radius: 15px; /* Bordas arredondadas */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -62,22 +61,21 @@ body {
 }
 
 #question-counter {
-    background-color: #ebebeb;
-    color: #4A4A4A; /* Cor do texto */
+    background-color: transparent;
+    color: #4a4a4a; /* Cor do texto */
     padding: 8px; /* Padding interno */
     margin: 0px 10px;
     border-radius: 10px; /* Bordas arredondadas */
     text-align: center;
-    font-size: 20px; /* Tamanho da fonte */
+    font-size: 120%; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
-    float: right;
-    
+    float: right;   
 }
 
 /* Estilo das perguntas */
 .question {
     margin-bottom: 40px; /* Espaçamento inferior */
-    font-size: 30px; /* Tamanho da fonte */
+    font-size: 150%; /* Tamanho da fonte */
     font-weight: 600; /* Negrito */
     color: #4A4A4A; /* Cor do texto */
     text-align: left; /* Centraliza o texto */
@@ -93,7 +91,7 @@ body {
     cursor: pointer; /* Cursor de ponteiro */
     text-align: left;
     display: block;
-    font-size: 17px; /* Tamanho da fonte */
+    font-size: 100%; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
 }
 
@@ -107,7 +105,7 @@ body {
 /* Estilo do botão "next" */
 #next-btn {
     display: none; /* Ocultar por padrão */
-    background-color: #4CAF50; /* Verde */
+    background-color: #4caf4f; /* Verde */
     color: #FFFFFF; /* Cor do texto */
     margin-top: 10px;
     padding: 12px 20px; /* Padding interno */
@@ -121,7 +119,7 @@ body {
 
 /* Efeito ao passar o mouse sobre o botão "next" */
 #next-btn:hover {
-    background-color: #226324; /* Verde escuro ao passar o mouse */
+    background-color: #236d25; /* Verde escuro ao passar o mouse */
     transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
 }
 
@@ -144,21 +142,13 @@ body {
     transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
 }
 
-img {
-    display: block;
-    margin: 10px auto;
-    max-width: 0px;
-    height: auto;
-    width: 25%;
-}
- 
 /* Estilo do resultado */
 #result {
     font-weight: 700;
     margin-top: 20px; /* Margem superior */
-    font-size: 20px; /* Tamanho da fonte */
+    font-size: 125%; /* Tamanho da fonte */
     text-align: center; /* Centraliza o texto */
-    color: #5a5a5a; /* Cor do texto */
+    color: #ffffff; /* 5a5a5a Cor do texto */
     display: none; /* Ocultar por padrão */
 }
 
@@ -172,7 +162,7 @@ img {
     padding: 10px 20px; /* Espaçamento interno do botão */
     font-size: 16px; /* Tamanho da fonte */
     color: #fff; /* Cor do texto */
-    background-color: #601edb; /* Cor de fundo do botão */
+    background-color: #601edbce; /* Cor de fundo do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Borda arredondada do botão */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
@@ -180,4 +170,12 @@ img {
 
 #menu-btn:hover {
     background-color: #380e86; /* Cor do botão ao passar o mouse */
+}
+
+.option {
+  background-color: #aec6cfd7; /* 16a9df Cor padrão das opções */
+}
+
+.option.selected {
+  background-color: #4d595ed5; /* Cor de seleção */
 }
