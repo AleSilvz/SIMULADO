@@ -1,0 +1,190 @@
+/* Estilo geral do corpo */
+body {
+    background-image: url(./img/amor.png);
+    background-size: cover;
+    background-position: center center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     
+    background-color: #f5f5f5; /* Cor de fundo mais suave */
+    margin: 0; /* Margem zero */
+    padding: 0; /* Padding zero */
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
+
+/* Centralizar o título na parte superior */
+ h1 {
+    color: #ffffff;/*#4A4A4A*/
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Boa sorte, amorzinho */
+h3 {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Estilo para botões de categoria e opções */
+.category-btn {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px auto; /* Margem superior e inferior */
+    padding: 12px 25px; /* Padding interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgba(255, 115, 159, 0.555); /* Cor padrão */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    font-size: 100%; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.category-btn:hover{
+    background-color: rgba(77, 14, 34, 0.555); /* Cor ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Container do quiz */
+#quiz-container {
+    background-image: url(./img/amor.png);
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(27, 3, 19, 0.281); /* Fundo do container */
+    padding: 30px; /* Padding interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 90%; /* Largura responsiva */
+    max-width: 700px; /* Largura máxima */
+}
+
+#question-counter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    color: #f3f3f3; /* Cor do texto */
+    padding: 8px; /* Padding interno */
+    margin: 0px 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center;
+    font-size: 120%; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    float: right;   
+}
+
+/* Estilo das perguntas */
+.question {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 40px; /* Espaçamento inferior */
+    font-size: 150%; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #f7f7f7; /* Cor do texto */
+    text-align: left; /* Centraliza o texto */
+}
+
+/* Estilo das opções */
+.option {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff; /* Cor do texto */
+    padding: 12px; /* Padding interno */
+    margin: 10px 0; /* Margem superior e inferior */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    text-align: left;
+    display: block;
+    font-size: 100%; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+
+
+/* Efeito ao passar o mouse sobre as opções */
+.option:hover {
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilo do botão "next" */
+#next-btn {
+    display: none; /* Ocultar por padrão */
+    background-color: #4caf4f; /* Verde */
+    color: #FFFFFF; /* Cor do texto */
+    margin-top: 10px;
+    padding: 12px 20px; /* Padding interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    float: right;
+}
+
+/* Efeito ao passar o mouse sobre o botão "next" */
+#next-btn:hover {
+    background-color: #236d25; /* Verde escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+#back-btn {
+    display: none; /* Ocultar por padrão */
+    background-color: #2196F3; /* Verde */
+    color: #fff; /* Cor do texto */
+    margin-top: 10px;
+    padding: 12px 20px; /* Padding interno */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    float: left; 
+}
+
+#back-btn:hover {
+    background-color: #135081; /* Verde escuro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilo do resultado */
+#result {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-top: 20px; /* Margem superior */
+    font-size: 125%; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    color: #000000; /* 5a5a5a Cor do texto */
+    display: none; /* Ocultar por padrão */
+}
+
+/* Estilo para esconder elementos */
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+#menu-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background-color: #9b14b6b4; /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Borda arredondada do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+#menu-btn:hover {
+    background-color: #33093bb4; /* Cor do botão ao passar o mouse */
+}
+
+.option {
+  background-color: #992175a1; /* 16a9df Cor padrão das opções */
+}
+
+.option.selected {
+  background-color: #350f29cc; /* Cor de seleção */
+}

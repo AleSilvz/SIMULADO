@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amorzinho</title>
+</head>
+<body>
+    <script type="module" src="script.js"></script>
+    <div id="category-selection">
+        <h1>Simulado Amorzinho</h1>
+        <button class="category-btn" data-category="Direção Defensiva">Direção Defensiva</button>
+        <button class="category-btn" data-category="Legislação">Legislação</button>
+        <button class="category-btn" data-category="Mecânica Básica">Mecânica Básica</button>
+        <button class="category-btn" data-category="Meio Ambiente">Meio Ambiente</button>
+        <!--button class="category-btn" data-category="Placas">Placas</button>-->
+        <button class="category-btn" data-category="Primeiros Socorros">Primeiros Socorros</button>
+        <button class="category-btn" id="all-questions-btn">Realizar Prova</button> <!-- Novo botão -->
+        <h3>Boa sorte, amorzinho ❤️❤️</h3>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <div id="question-counter"></div>
+        <h2 class= question id="question"></h2>
+        <img id="question-image" src="" alt="Question Image" style="max-width: 50%; display: none;" />
+        <div>
+            <button class="option" onclick="checkAnswer(0)"></button>
+            <button class="option" onclick="checkAnswer(1)"></button>
+            <button class="option" onclick="checkAnswer(2)"></button>
+            <button class="option" onclick="checkAnswer(3)"></button>
+        </div>
+        <button id="next-btn" style="display: none;" onclick="nextQuestion()">Próxima Questão</button>
+        <button id="back-btn" style="display: nome;" onclick="backQuestion()">Voltar Questão</button>
+        
+    </div>
+
+    <div id="result" style="display: none; text-align: center;"></div>
+    
+    <div style="display: flex; justify-content: center; margin-top: 50px;">
+        <button id="menu-btn" style="display: none; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 50px;">Voltar ao Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+      
+</body>    
+</html>
